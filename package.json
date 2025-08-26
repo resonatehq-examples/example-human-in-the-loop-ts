@@ -1,0 +1,17 @@
+{
+  "name": "example-human-in-the-loop-ts",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "@resonatehq/sdk": "^0.0.0-SNAPSHOT-33d928c88d50efe9e94a34ee496e92b66fb1d057",
+    "@types/express": "^5.0.3",
+    "express": "^5.1.0"
+  }
+}
