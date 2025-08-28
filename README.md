@@ -1,8 +1,8 @@
 ![Resonate example app README banner](./images/resonate-example-app-readme-banner.png)
 
-# Human-In-The-Loop use case
+# Human-in-the-loop
 
-**SDK: TypeScript**
+**Resonate TypeScript SDK**
 
 This example showcases Resonate's ability to block a function execution's progress while awaiting on an action/input from a human.
 
