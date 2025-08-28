@@ -1,4 +1,4 @@
-![Resonate example app README banner](./images/resonate-example-app-readme-banner.png)
+![Resonate example app README banner](/assets/resonate-example-app-readme-banner.png)
 
 # Human-in-the-loop
 
