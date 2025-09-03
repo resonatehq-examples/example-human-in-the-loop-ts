@@ -18,14 +18,12 @@ app.post("/start-workflow", async (req: Request, res: Response) => {
       return res.status(400).json({ error: "workflow_id is required" });
     }
 
-    const handle = (await resonate.rpc(
+    const result = await resonate.rpc(
       workflowId,
       "foo",
       workflowId,
       resonate.options({ target: "poll://any@workers" })
-    )) as { result: Promise<any> };
-
-    const result = await handle.result;
+    );
 
     return res.status(200).json({ message: result });
   } catch (err: any) {

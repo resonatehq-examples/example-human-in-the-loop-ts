@@ -140,4 +140,5 @@ vite.config.ts.timestamp-*
 
 
 .cursor
-*.db
+resonate.db
+bun.lock

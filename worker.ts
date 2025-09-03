@@ -1,4 +1,5 @@
-import { Resonate, Context } from "@resonatehq/sdk";
+import { Resonate } from "@resonatehq/sdk";
+import type { Context } from "@resonatehq/sdk";
 
 const resonate = Resonate.remote({
   group: "workers",
@@ -16,7 +17,7 @@ function sendEmail(context: Context, promiseId: string) {
 function* foo(context: Context, workflowId: string) {
   console.log(`foo workflow ${workflowId} started`);
 
-  const blockingPromise = yield* context.promise();
+  const blockingPromise = yield* context.promise({});
   yield* context.run(sendEmail, blockingPromise.id);
 
   console.log(

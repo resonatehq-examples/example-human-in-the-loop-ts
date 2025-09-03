@@ -2,26 +2,13 @@
 
 # Human-in-the-loop
 
+![human in the loop banner](/assets/human-in-the-loop-banner.png)
+
 **Resonate TypeScript SDK**
 
 This example showcases Resonate's ability to block a function execution's progress while awaiting on an action/input from a human.
 
-## Project prerequisites
-
-This example application uses [bun](https://bun.sh/) as the TypeScript environment and package manager.
-
-After cloning this repo, change directory into the root of the project and run the following command to install dependencies:
-
-```shell
-bun install
-```
-
-This example application requires that a Resonate Server is running locally.
-
-```shell
-brew install resonatehq/tap/resonate
-resonate serve
-```
+Instructions on [How to run this example](#how-to-run-the-example) are below.
 
 ## Indefinite function suspension
 
@@ -90,6 +77,21 @@ You will eventually see each worker start executing a workflow.
 Try killing one of the workers while the workflow is blocked and watch it recover on the other worker.
 
 ## How to run the example
+
+This example application uses [bun](https://bun.sh/) as the TypeScript environment and package manager.
+
+After cloning this repo, change directory into the root of the project and run the following command to install dependencies:
+
+```shell
+bun install
+```
+
+This example application requires that a Resonate Server is running locally.
+
+```shell
+brew install resonatehq/tap/resonate
+resonate serve
+```
 
 You will need 3 terminals to run this example, one for the HTTP Gateway, one for the Worker, and one to send a cURL request. This does not include the terminal where you might have started the Resonate Server.
 
