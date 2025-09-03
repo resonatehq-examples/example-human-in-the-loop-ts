@@ -5,7 +5,7 @@ const resonate = Resonate.remote({
   group: "workers",
 });
 
-function sendEmail(context: Context, promiseId: string) {
+function sendEmail(ctx: Context, promiseId: string) {
   console.log(`Simulating sending email for promise ${promiseId}`);
   // Simulate sending an email to the user with a link to resolve the promise
   console.log(
@@ -14,11 +14,11 @@ function sendEmail(context: Context, promiseId: string) {
   return `Email sent for promise ${promiseId}`;
 }
 
-function* foo(context: Context, workflowId: string) {
+function* foo(ctx: Context, workflowId: string) {
   console.log(`foo workflow ${workflowId} started`);
 
-  const blockingPromise = yield* context.promise({});
-  yield* context.run(sendEmail, blockingPromise.id);
+  const blockingPromise = yield* ctx.promise({});
+  yield* ctx.run(sendEmail, blockingPromise.id);
 
   console.log(
     `foo workflow ${workflowId} blocked, waiting on human interaction`
