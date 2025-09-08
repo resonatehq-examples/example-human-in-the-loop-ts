@@ -1,8 +1,6 @@
-![Resonate example app README banner](/assets/resonate-example-app-readme-banner.png)
+![human in the loop banner](/assets/human-in-the-loop.png)
 
 # Human-in-the-loop
-
-![human in the loop banner](/assets/human-in-the-loop-banner.png)
 
 **Resonate TypeScript SDK**
 
