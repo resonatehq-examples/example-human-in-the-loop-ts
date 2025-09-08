@@ -4,13 +4,13 @@
 
 **Resonate TypeScript SDK**
 
-This example showcases Resonate's ability to block a function execution's progress while awaiting on an action/input from a human.
+This example showcases Resonate's ability to block a function execution's progress while waiting for an action or input from a human.
 
 Instructions on [How to run this example](#how-to-run-the-example) are below.
 
 ## Indefinite function suspension
 
-The Human-In-The-Loop example showcases how Resonate enables a function to suspend execution for an indefinite amount of time. That is — where the function yields the promsie, the function stops executing and will only resume when the promise resolves.
+The Human-In-The-Loop example showcases how Resonate enables a function to suspend execution for an indefinite amount of time. That is, when the function yields a promise, it pauses execution and resumes only when the promise resolves.
 
 ```typescript
 function* foo(context: Context, workflowId: string) {
@@ -23,7 +23,7 @@ function* foo(context: Context, workflowId: string) {
 
 This enables a wide range of use cases where a function may depend on a human interaction or human input for it to continue.
 
-Use cases like this have tradionally been quite complex to solve for, requiring the steps to be broken up and triggered by schedules or a queuing architecture.
+Use cases like this have traditionally been quite complex to solve, requiring the steps to be broken up and triggered by schedules or a queuing architecture.
 
 Resonate pushes that complexity into the platform, enabling a much simpler developer experience for these use cases.
 
@@ -32,7 +32,7 @@ Resonate pushes that complexity into the platform, enabling a much simpler devel
 With Resonate, each function invocation pairs with a promise.
 Each promise has a unique ID in the system.
 
-The Resonate system deduplicates on the promise ID and will either reconnect to an PENDING progress, or return the result of the RESOLVED promise.
+The Resonate system deduplicates based on the promise ID and will either reconnect to a PENDING execution, or return the result of the RESOLVED promise.
 
 This example showcases how this works in the gateway:
 
@@ -67,7 +67,7 @@ app.post("/start-workflow", async (req: Request, res: Response) => {
 
 ## Load balancing and recovery
 
-This example is capable of showcasing Resonate's automatic loadbalancing and recovery.
+This example is capable of showcasing Resonate's automatic load balancing and recovery.
 
 Run multiple workers and start multiple workflows.
 You will eventually see each worker start executing a workflow.
