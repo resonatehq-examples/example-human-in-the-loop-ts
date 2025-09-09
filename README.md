@@ -88,7 +88,7 @@ This example application requires that a Resonate Server is running locally.
 
 ```shell
 brew install resonatehq/tap/resonate
-resonate serve
+resonate dev
 ```
 
 You will need 3 terminals to run this example, one for the HTTP Gateway, one for the Worker, and one to send a cURL request. This does not include the terminal where you might have started the Resonate Server.
