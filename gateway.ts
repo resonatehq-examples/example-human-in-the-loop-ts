@@ -42,7 +42,7 @@ app.get("/unblock-workflow", async (req: Request, res: Response) => {
       return res.status(400).json({ error: "promise_id is required" });
     }
 
-    await resonate.promises.resolve(promiseId);
+    await resonate.promises.resolve({id: promiseId});
     return res.status(200).json({ message: "workflow unblocked" });
   } catch (err: any) {
     return res.status(500).json({
