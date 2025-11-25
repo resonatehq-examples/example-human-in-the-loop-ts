@@ -6,7 +6,6 @@ const app = express();
 app.use(express.json());
 
 const resonate = new Resonate({
-  verbose: true,
   url: "http://localhost:8001",
   group: "gateway",
 });
