@@ -112,3 +112,9 @@ curl -X POST http://localhost:5001/start-workflow -H "Content-Type: application/
 ```
 
 The worker will print a link that you can navigate to in your browser, which sends another request to the gateway, resolving the blocking promise and allowing the workflow to complete.
+
+## Learn More
+
+- [Resonate Documentation](https://docs.resonatehq.io)
+- [Human-in-the-Loop Pattern](https://docs.resonatehq.io/get-started/examples/human-in-the-loop)
+- [TypeScript SDK Guide](https://docs.resonatehq.io/develop/typescript)
