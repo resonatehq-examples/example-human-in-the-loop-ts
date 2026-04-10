@@ -10,7 +10,7 @@
     "typescript": "^5"
   },
   "dependencies": {
-    "@resonatehq/sdk": "^0.8.6",
+    "@resonatehq/sdk": "^0.10.0",
     "@types/express": "^5.0.3",
     "express": "^5.1.0"
   }
