@@ -1,4 +1,10 @@
-![human in the loop banner](/assets/human-in-the-loop.png)
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/banner-dark.png">
+    <source media="(prefers-color-scheme: light)" srcset="./assets/banner-light.png">
+    <img alt="Human in the Loop — Resonate example" src="./assets/banner-dark.png">
+  </picture>
+</p>
 
 # Human-in-the-loop
 
