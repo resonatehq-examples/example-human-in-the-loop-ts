@@ -41,7 +41,7 @@ app.get("/unblock-workflow", async (req: Request, res: Response) => {
     }
     const raw = "human_approval";
     const data = Buffer.from(JSON.stringify(raw), "utf8").toString("base64");
-    const result = await resonate.promises.settle(promiseId, "resolved", { data: data });
+    const result = await resonate.promises.resolve(promiseId, { data });
     console.log(result);
     return res.status(200).json({ message: "workflow unblocked" });
   } catch (e: any) {
