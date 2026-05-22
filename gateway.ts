@@ -45,6 +45,7 @@ app.get("/unblock-workflow", async (req: Request, res: Response) => {
     console.log(result);
     return res.status(200).json({ message: "workflow unblocked" });
   } catch (e: any) {
+    console.error("failed_to_unblock_workflow:", e);
     return res.status(500).json({
       error: "failed_to_unblock_workflow: " + String(e),
     });
